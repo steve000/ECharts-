@@ -1,15 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import rundata from '@/components/rundata'
+import login from '../components/login'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'rundata',
-      component: rundata
-    }
-  ]
+  routes: [{
+    path: '/',
+    name: 'login',
+    component: login
+  }, {
+    path: '/rundata',
+    name: 'rundata',
+    component: rundata
+  }]
 })
