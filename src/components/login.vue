@@ -9,6 +9,7 @@
 </template>
 <script>
 import axios from 'axios'
+import {API} from '../config.js'
 export default {
   data () {
     return {
@@ -18,7 +19,7 @@ export default {
   methods: {
     btn () {
       let that = this
-      let url = 'http://127.0.0.1:3000/userRunData?runId=' + that.inputData
+      let url = API + that.inputData
       axios.get(url)
         .then(function (res) {
           let data = res.data
