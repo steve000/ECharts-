@@ -46,7 +46,7 @@ export default {
 <style scoped>
 .body {
   height: 800px;
-  background: url(http://img0.imgtn.bdimg.com/it/u=3643092268,1191363402&fm=26&gp=0.jpg) no-repeat center center fixed;
+  background: url(https://ooo.0o0.ooo/2017/06/12/593dfacee5f2b.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   background-size: cover;
 }

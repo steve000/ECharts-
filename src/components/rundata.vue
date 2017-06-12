@@ -17,7 +17,12 @@ export default {
   },
   created () {
     let that = this
-    let rundataTemp = that.$store.state.data.data
+    let rundataTemp
+    if (that.$store.state.data.data) {
+      rundataTemp = JSON.parse(sessionStorage.ls_data)
+    } else {
+      rundataTemp = that.$store.state.data.data
+    }
     for (let i = 0; i < rundataTemp.length; i++) {
       let dateTemp = new Date(rundataTemp[i].timestamp * 1000)
       let step = rundataTemp[i].step
@@ -44,7 +49,6 @@ export default {
         target: i + 1
       }
     })
-    console.log(links)
     myChartTwo.setOption({
       title: {
         text: '笛卡尔坐标系上的 每天运动步数',
